@@ -24,7 +24,7 @@ function App() {
       width: 'auto',
     },
   }));
-  
+
   const SearchIconWrapper = styled('div')(({ theme }) => ({
     padding: theme.spacing(0, 2),
     height: '100%',
@@ -34,7 +34,7 @@ function App() {
     alignItems: 'center',
     justifyContent: 'center',
   }));
-  
+
   const StyledInputBase = styled(InputBase)(({ theme }) => ({
     color: 'inherit',
     '& .MuiInputBase-input': {
@@ -76,33 +76,27 @@ function App() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-       <ThemeProvider theme={darkTheme}>
-       <AppBar position="static" >
-        <Toolbar>
-          <Button onClick={() => redirect('/')} sx={{ flexGrow: 4, display: { xs: 'none', sm: 'block' } }} color="inherit">Home</Button>
-          <Button onClick={() => redirect('/characters')} sx={{ flexGrow: 4, display: { xs: 'none', sm: 'block' } }} color="inherit">Characters</Button>
-          <Button onClick={() => redirect('/about-us')} sx={{ flexGrow: 4, display: { xs: 'none', sm: 'block' } }} color="inherit">About us</Button>
-         
-          {/* <Search className='input-size' onKeyDown={(event: any) => handleKeyDown(event)}  >
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              value={searchValue}
-              onChange={(value: any) => setSearchValue(value.target.value)}
-              placeholder="Search character…"
-              inputProps={{ 'aria-label': 'search',  className: 'input-size-text', maxLength:"60" }}
-            />
-          </Search> */}
-        </Toolbar>
-      </AppBar>
-       </ThemeProvider>
-      
+      <ThemeProvider theme={darkTheme}>
+        <AppBar position="static">
+          <Toolbar variant="dense">
+            <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
+              {/* <div className=''> */}
+                <img src='/images/logo_white.png' className='logo'></img>
+              {/* </div> */}
+              {/* <MenuIcon /> */}
+            </IconButton>
+            <Typography variant="h6" color="inherit" component="div">
+              Photos
+            </Typography>
+          </Toolbar>
+        </AppBar>
+      </ThemeProvider>
+
       <div className="App">
-      <RouterComponent />
-    </div>
+        <RouterComponent />
+      </div>
     </Box>
-   
+
   );
 }
 

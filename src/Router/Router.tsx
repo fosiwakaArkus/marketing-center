@@ -9,6 +9,7 @@ import AboutUsComponent from '../views/About-us/AboutUs';
 import { Ruta } from '../interfaces/rutas.interface';
 import CharactersComponent from '../views/Characters/Characters';
 import CharacterComponent from '../views/Character/Character';
+import HomePageComponent from '../views/HomePage/Home';
 
 function RouterComponent() {
   const rutas: Array<Ruta> = [
@@ -31,6 +32,11 @@ function RouterComponent() {
       key: 3,
       path: '/character/:id/:type?',
       element: <CharacterComponent />
+    },
+    {
+      key: 4,
+      path: '/homepage',
+      element: <HomePageComponent />
     }
   ]
   return (
