@@ -1,30 +1,20 @@
 import React from 'react';
 import '../../App.css';
-import { Button } from '../button/button';
+/* import { Button } from '../button/button'; */
 import './menu.css';
+import { Input, Button, TextField } from '@mui/material';
+import Grid from '@mui/material/Grid';
 
 function Menu() {
   return (
-    <div className='hero-container'>
-      {/* <video src='/videos/video-1.mp4' autoPlay loop muted /> */}
-      {/* <img src='/images/home.jpeg' alt='home' /> */}
-      <h1>ADVENTURE AWAITS</h1>
-      <p>What are you waiting for?</p>
-      <div className='hero-btns'>
-        <Button
-          buttonStyle='btn--outline'
-          buttonSize='btn--large'
-        >
-          GET STARTED
-        </Button>
-        <Button
-          buttonStyle='btn--primary'
-          buttonSize='btn--large'
-          onClick={(event: React.MouseEvent<HTMLButtonElement>) => console.log('hey')}
-        >
-          WATCH TRAILER <i className='far fa-play-circle' />
-        </Button>
+    <div className='main-container'>
+      <h2>WELCOME TO THE</h2>
+      <img src='images/logo_white.png' className='logoMain' />
+      <div className='horizontal'>
+        <Input color='primary' disableUnderline margin='dense' className='search' />
+        <img src='images/searchbtn.png' className='searchButton' />
       </div>
+      <h2 className='sub'>Customized marketing to help grow your business.</h2>
     </div>
   );
 }

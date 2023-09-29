@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { cardItem } from '../../interfaces/cardItem.interface';
+import './cards.css';
 
 function CardComponent(props: cardItem) {
     return (
