@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import './cards.css';
 import Grid from '@mui/material/Grid';
@@ -8,7 +9,7 @@ import { useParams } from "react-router-dom";
 
 
 function Cards() {
-    /* const subcategory = {
+    const subcategory = {
         "success": true,
         "data": {
             "subCategories": [
@@ -418,20 +419,20 @@ function Cards() {
             "innerException": "",
             "message": ""
         }
-    } */
-        const [subcategory, setSubcategory] = useState<Response>({} as Response)
-        let params = useParams();
-    
-        useEffect(() => {
-            getSubcategory()
-        }, [])
-    
-        function getSubcategory(): void {
-            console.log('params: ', params)
-            axios.get(`https://localhost:7069/subcategory/getall`)
-                .then((response: any) => setSubcategory({ ...response.data}))
-                .catch((error) => console.error('ocurro un error: ', error))
-        }
+    }
+    /*         const [subcategory, setSubcategory] = useState<Response>({} as Response)
+            let params = useParams();
+        
+            useEffect(() => {
+                getSubcategory()
+            }, [])
+        
+            function getSubcategory(): void {
+                console.log('params: ', params)
+                axios.get(`https://localhost:7069/subcategory/getall`)
+                    .then((response: any) => setSubcategory({ ...response.data}))
+                    .catch((error) => console.error('ocurro un error: ', error))
+            } */
 
     return (
         <div className='cards'>
@@ -448,23 +449,19 @@ function Cards() {
                                 spacing={2}
                                 item
                             >
-                               {/*  {subcategory.data?((item: any) => {
-                                    return (
-                                        <Grid item xs={12} md={4} >
-                                            <div className='ejem'>
-                                                <CardComponent
-                                                    src={item.icon}
-                                                    text={item.description}
-                                                    label={item.name}
-                                                    path='/services'
-                                                />
-                                            </div>
-                                        </Grid>
-                                    )
+                                {subcategory.data.subCategories.map((item: any) => (
+                                    <Grid item xs={12} md={4} >
+                                        <div className='ejem'>
+                                            <CardComponent
+                                                src={item.icon}
+                                                text={item.description}
+                                                label={item.name}
+                                                path='/services'
+                                            />
+                                        </div>
+                                    </Grid>
+                                ))
                                 }
-                                ):null} */}
-                                
-
                                 <Grid item xs={12} md={4} >
                                     <div className='ejem'>
                                         <CardComponent
