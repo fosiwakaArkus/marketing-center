@@ -1,0 +1,31 @@
+.optionImage {
+    height: 100px;
+    width: 100px;
+}
+
+.contai {
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.subTitle {
+    font-size: 10px;
+    font-weight: 100;
+    margin-top: 20px;
+    color: #58595A;
+    /* max-width: 50%; */
+}
+
+.title {
+    font-size: 27px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    color: #1D1D1D;
+}
+
+.link {
+    color: #699abd;
+    font-weight: bold;
+    font-size: 25px;
+}
