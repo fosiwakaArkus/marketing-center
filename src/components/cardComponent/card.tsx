@@ -15,8 +15,14 @@ function CardComponent(props: cardItem) {
                             src={props.src}
                         />
                     </figure>
+                    <div className='cards__item__info__title'> 
+                        <p className='cards__item__title'>{props.label}</p>
+                    </div>
                     <div className='cards__item__info'>
                         <h5 className='cards__item__text'>{props.text}</h5>
+                    </div>
+                    <div className='cards__item__info__button'>
+                        <button className='cards__item__info__button2'>START DESIGNING</button>
                     </div>
                 </Link>
             </li>

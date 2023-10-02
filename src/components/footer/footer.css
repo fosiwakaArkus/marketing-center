@@ -136,7 +136,17 @@
     color: #fff;
     margin-bottom: 16px;
   }
+
+  .footerTitle{
+    color: #3c3cbb;
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
   
+  .footer-image-logo{
+    height: auto;
+    width: 130px;
+  }
   @media screen and (max-width: 820px) {
     .footer-links {
       padding-top: 2rem;
