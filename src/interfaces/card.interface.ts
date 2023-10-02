@@ -1,6 +1,4 @@
-import { Caracter, LocationOrigin } from "./rickandmorty.interface";
-
-export interface PropsCard extends Caracter{
+export interface PropsCard {
     expandedCard?: boolean;
     width?: string;
 }

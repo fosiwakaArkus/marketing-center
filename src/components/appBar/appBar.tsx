@@ -1,6 +1,5 @@
 
 import { AppBar, Box, Button, IconButton, InputBase, ThemeProvider, Toolbar, Typography, createTheme } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
 import React from 'react';
 import './appBar.css';
 

@@ -4,11 +4,8 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import HomeComponent from '../views/Home/Home';
 import AboutUsComponent from '../views/About-us/AboutUs';
 import { Ruta } from '../interfaces/rutas.interface';
-import CharactersComponent from '../views/Characters/Characters';
-import CharacterComponent from '../views/Character/Character';
 import HomePageComponent from '../views/HomePage/Home';
 
 function RouterComponent() {
@@ -16,27 +13,12 @@ function RouterComponent() {
     {
         key: 0,
         path: '/',
-        element: <HomeComponent />
+        element: <HomePageComponent />
     },
     {
         key: 1,
         path: '/about-us',
         element: <AboutUsComponent />
-    },
-    {
-        key: 2,
-        path: '/characters',
-        element: <CharactersComponent />
-    },
-    {
-      key: 3,
-      path: '/character/:id/:type?',
-      element: <CharacterComponent />
-    },
-    {
-      key: 4,
-      path: '/homepage',
-      element: <HomePageComponent />
     }
   ]
   return (
