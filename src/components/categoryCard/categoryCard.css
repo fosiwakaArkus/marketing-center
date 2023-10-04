@@ -1,0 +1,91 @@
+.cards__item {
+  width: 279px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.cards__item {
+  display: flex;
+  flex: 1;
+}
+
+.cards__item__link {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.cards__item__pic-wrap {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+}
+.cards__item__img {
+  width: 100%;
+  object-fit: cover;
+  background-color: #fff;
+  height: 279px;
+}
+.cards__item__img:hover {
+  transform: scale(1.1);
+}
+
+.cards__item__info__title{
+  /* height: 244px;
+  width: 279px; */
+  background-color: #fff;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 25px;
+  padding-top: 20px;
+}
+
+.cards__item__title{
+  color: #252e48;
+  font-family: 'Roboto', sans-serif;
+  font-size: 21px;
+  margin-bottom: 10px;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.cards__item__info {
+  height: 200px;
+  width: 279px;
+  background-color: #fff;
+  padding: 25px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.cards__item__text {
+  color: #252e48;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+
+}
+
+.cards__item__info__button{
+  width: 100%;
+  height: 100%;
+}
+
+.cards__item__info__button2{
+  width: 100%;
+  height: 50px;
+  background-color: #486acf;
+  border: none;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}

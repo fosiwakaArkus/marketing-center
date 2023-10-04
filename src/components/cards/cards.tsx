@@ -7,14 +7,12 @@ import { CardSubCategoryProps, SubCategories } from '../../interfaces/card.inter
 import { subCategoriesFake } from './fixtures';
 import axios from 'axios';
 
-function Cards(props: CardSubCategoryProps) {
-    const {subCategories } = props;
+function Cards() {
     const [subCatState, setSubCatState] = useState<Array<SubCategories> | undefined>(subCategoriesFake)
 
 
     useEffect(() => {
-        const base = 'https://d79b-181-37-49-94.ngrok-free.app'
-        axios.get(`${base}/api/v1/SubCategory/GetAll`).then((response: {data: CardSubCategoryProps}) => {
+        axios.get(`${process.env.DATABASE_URL}/api/v1/SubCategory/GetAll`).then((response: {data: CardSubCategoryProps}) => {
             setSubCatState(response.data.subCategories || subCategoriesFake)
         }).catch(() => setSubCatState(subCategoriesFake))
     
@@ -42,7 +40,7 @@ function Cards(props: CardSubCategoryProps) {
                                                 src={item.icon}
                                                 text={item.description}
                                                 label={item.name}
-                                                path='/services'
+                                                path={`/category/${item.subCategoryId}`}
                                             />
                                         </div>
                                     </Grid>

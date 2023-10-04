@@ -33,3 +33,27 @@ export interface SubCategories {
     subCategoryThumbNails?: Array<any>;
     ftinHeaderAndFooter?: any;
 }
+
+export interface InteriorCategory {
+    interiorCategoryId?: number;
+    categoryId?: number;
+    subCategoryId?: number;
+    name?: any;
+    displayStatus?: number;
+    icon?: any;
+    categoryLandPageDesc?: string | null;
+    categoryLandPageHead?: string | null;
+    subCategoryLandPageDesc?: string | null;
+    isActive?: boolean;
+    seotitle?: string | null;
+    seoprettyUrl?: string | null;
+    seodescMetadata?: string | null;
+    createdDate?: string;
+    updatedDate?: string;
+    deleteFlag?: boolean;
+    rowVersion?: string;
+}
+
+export interface CardInteriorCategoryProps {
+    interiorCategories?: Array<InteriorCategory>
+}
